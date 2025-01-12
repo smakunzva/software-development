@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Software Development</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="#persona-info">Personal Info</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#sdlc">SDLC</a></li>
+        <li><a href="#frontend-development">Frontend Development</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div>
+        <section id="persona-info">
+            <div></div>
+            <div class="focus-animate" style="margin-top: 20px;">
+                <h1>Welcome to my home page</h1>
+            </div>
+
+            <form title="Personal Information" action="#success.html" method="post"></form>
+                <div class="card text-bg-light border-secondary mb-3">
+                    <div class="card-title">
+                        <h3>Personal Information</h3>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="row col-md-6">
+                                <div><label class="error-message" id="lb--name-error" for="name" hidden>Name can only be
+                                        alpha
+                                        characters!</label></div>
+                                <div>
+                                    <label id="lb-name" for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required
+                                        placeholder="Please enter your name.." onkeypress="validateNames(event)">
+                                </div>
+                            </div>
+
+                            <div class="row col-md-6">
+                                <div><label class="error-message" id="lb-error-matriculation" for="matriculation"
+                                        hidden>Matriculation can only contain numbers!</label></div>
+                                <div>
+                                    <label for="matriculation" id="lb-matriculation">Matriculation:</label>
+                                    <input type="text" id="matriculation" name="matriculation" required
+                                        placeholder="Please enter matriculation number.."
+                                        onkeypress="validateMatriculation(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div><label class="error-message" id="lb-m-initial-error" for="m-initial" hidden>Middle
+                                        Initial
+                                        can only
+                                        be alpha characters!</label></div>
+                                <label for="m-initial" id="lb-m-initial">M. Initial:</label>
+                                <input type="text" id="m-initial-input" name="m-initial" required
+                                    placeholder="Please enter your initial.." onkeypress="validateInitials(event)">
+                            </div>
+                            <div class="col-md-6">
+                                <div></div>
+                                <label for="semester">Semester:</label>
+                                <input type="text" id="semester" name="semester" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div><label class="error-message" id="lb-last-name-error" for="lastname" hidden>Last
+                                        name
+                                        can
+                                        only be
+                                        alpha characters!</label></div>
+                                <label id="lb-last-name" for="lastname">Last Name:</label>
+                                <input type="text" id="lastname" name="lastname" required
+                                    onkeypress=" validateLastName(event)" placeholder="Please enter your last name..">
+                            </div>
+
+                            <div class="col-md-6">
+                                <div></div>
+                                <label for="program">Program:</label>
+                                <input list="programs" id="program" name="program" placeholder="Select program" required
+                                    class="top-nav dropdown">
+                                <datalist id="programs" class="dropdown-toggle">
+                                    <option value="Health, Education & Social Affairs">
+                                    <option value="Technology, Architecture & Sustainability">
+                                    <option value="Communication, Media & Marketing">
+                                    <option value="Tourism, Hotel & Events">
+                                    <option value="Computer Science & Data Science">
+                                    <option value="Design, Film & Music">
+                                    <option value="Logistics">
+                                    <option value="Psychology">
+                                    <option value="Business & Law"></option>
+                                </datalist>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="country">Country:</label>
+                                <input list="countries" id="country" name="country" placeholder="Select country"
+                                    required>
+                                <datalist id="countries" class="dropdown-toggle">
+                                </datalist>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="start-date">Started In:</label>
+                                <input type="date" id="start-date" name="start-date" required>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    </div>
+
+
+
+    <section id="feedback">
+        <div class="card text-bg-light border-secondary mb-3">
+            <div class="card-title">
+                <h2>Feedback</h2>
+            </div>
+            <div class="row">
+                <p>I have heard about this graduate program from:</p>
+                <div>
+                    <input type="checkbox" id="facebook" name="facebook" value="Facebook">
+                    <label for="facebook">Media</label>
+                    <input type="checkbox" id="add" name="add" value="Add">
+                    <label for="add">Add</label>
+                    <input type="checkbox" id="agency" name="agency" value="Agency">
+                    <label for="agency">Agency</label>
+                    <input type="checkbox" id="other" name="other" value="Other" checked>
+                    <label for="other">Other</label>
+
+                </div>
+
+                <div>
+                    <p>When I finish my study I will</p>
+                    <input type="radio" id="return" name="future" value="Return">
+                    <label for="return">return to my country</label>
+                    <input type="radio" id="job" name="future" value="Job" checked>
+                    <label for="job">find a job in Europe </label>
+                    <input type="radio" id="training" name="future" value="Training">
+                    <label for="training">do the practical training and then decide</label>
+
+                </div>
+
+                <p>Feedback for the course:</p>
+
+                <div>
+                    <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your feedback here">Software Development course was okay I learned new things and also refreshed some concepts that I have learned before. Professor Dan provided course materials in the form of notes and videos after every lecture which helped in reasearching further on various concepts. The professor gave us assignments which helped in understanding the concepts further.
+Though I appreciate the effort from the professor I felt like we did not cover much concepts that have to do with software development. I think concepts like micro services architecture, systems architecture, containerization, event driven development, cloud solutions etc would have saved a better purpose than maybe focusing on a programming language. I was hopping the course would be more theoratical and we dive deep into the current trends of software craftsman.
+
+In conclusion I enjoyed the course and I am looking forward to the next semester. Thank you Professor for teaching us!
+                    </textarea>
+                </div>
+
+            </div>
+
+    </section>
+
+    <section id="sdlc">
+        <div class="card text-bg-light border-secondary mb-3">
+            <div class="card-body">
+                <div class="card-title">
+                    <h2>SDLC</h2>
+                </div>
+                <div class="card text-bg-light border-secondary mb-3">
+                    <div class="card-body">
+                        <p>I will write a paragraph for each methodology of <a
+                                href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">SDLC</a> There are
+                            many
+                            of
+                            them but I will suggest a
+                            few. My suggestions and reasons are as follows:</p>
+
+                        <p><strong>Click to read:</strong></p>
+
+                        <button type="button" class="collapsible">Agile</button>
+                        <div class="content">
+                            <p>Agile methodology is the leading methodology being used across many industries at the moment. It involes
+                                iterative development and testing. It is a good methodology to use when the requirements are not clear
+                                and the project is complex. It is also good for projects that require frequent changes. Agile methodology
+                                is good for projects that require frequent changes. Agile methodology is good for projects that require frequent changes.
+                                Agile development involves doing things in an iterative manner where you develop a prototype and continously add more fetures.
+                                This helps as clients will start interacting with the prototype and will have clarity of what they are invisioning. There are
+                                various methodologies within AGILE which are Scrum, Kanban, Lean, XP, Adaptive project framework, Extreme project management,
+                                Adaptive software development, Dynamic systems development and Feature driven development.
+                            </p>
+                        </div>
+                        <button type="button" class="collapsible">V Shaped SDLC Model</button>
+                        <div class="content">
+                            <p>V Shape SDLC model which is also known as the verification and validation model is an extension of the traditional Waterfall model.
+                                It emphasizes the importance of validation and verification in each phase of the software development lifecycle. The V-shaped model
+                                is characterized by a sequential path of execution of processes, where each phase must be completed before the next phase begins.
+                                The model is called V shaped because the process steps form a V shape when diagrammed. The key phases of V-shaped SDLC model are :
+                                The key phases of V-shaped SDLC model are: Requirements Analysis, System Design, High Level Design, Low Level Design, Implementation, Unit Testing, Integration Testing, System Testing, and Acceptance Testing.
+                            </p>
+                        </div>
+                        <button type="button" class="collapsible">Waterfall</button>
+                        <div class="content">
+                            <p>This is one of the earliest and most straightforward methodologies used in software developement. It is a linear and sequential approach where
+                                each phase of the developement process must be completed before moving on to the next phase. The model is called waterfall because the process flows downwards through the phases
+                                like a waterfall. The key phases of waterfall model are : requirements analysis, system design, implementation, integration and testing, deployment and maintanance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p>Among so many <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">SDLC</a> Methodologies the ones that are in the AGILE classification are better. Among
+                        AGILE
+                        <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">SDLC</a> Methods, I have also a few suggestions</p>
+                    <div>
+                        <p>A) Scrum</p>
+                        <p>B) Kanban</p>
+                        <p>C) Lean</p>
+                    </div>
+
+                    <div>
+                        <p>In this software development and application course of <a
+                                href="https://www.srh-university.de/en/">SRH</a> we learn the following</p>
+                        <div>
+                            <p>A) Programming languages</p>
+                            <p>B) Software development methodologies</p>
+                            <p>C) C programming</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="frontend-development">
+        <div class="card text-bg-light border-secondary mb-3">
+            <div class="card-title">
+                <h2>Frontend Development</h2>
+            </div>
+            <p>I have use <a href="https://www.w3schools.com/css/default.asp">CSS</a> in this webpage and there are 3
+                ways to include <a href="https://www.w3schools.com/css/default.asp">CSS</a> in a webpage as follows</p>
+            <div>
+                <p>A) Inline CSS</p>
+                <p>B) Internal CSS</p>
+                <p>C) External CSS</p>
+            </div>
+
+            <p>The reasons <a href="https://www.w3schools.com/css/default.asp">CSS</a> used in a webpage are:</p>
+            <div>
+                <p>A) To make the webpage look good</p>
+                <p>B) To make the webpage responsive</p>
+                <p>C) To make the webpage interactive</p>
+
+                <p>We also use <a href="https://www.w3schools.com/js/default.asp">JavaScript</a> in webpage development.
+                    The main reasons are as follows:</p>
+                <div>
+                    <p>A) To make the webpage interactive</p>
+                    <p>B) To make the webpage dynamic</p>
+                    <p>C) To make the webpage responsive</p>
+                </div>
+                <div></div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <input type="checkbox" id="css" name="css" value="CSS" style="width: 100%;">
+                    </div>
+                    <div class="col-md-9">
+                        <p>I have done this project myself and accept the consequences if found other ways</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="contact">
+        <div class="card">
+            <div class="card-title">
+                <h2>Contact</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <p>You can reach me at : </p>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="email" id="email" name="email" required placeholder="Please enter your email..">
+                        <div><label for="email">email</label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div>
+        <input type="submit"><a href="#persona-info"></a></input>
+    </div>
+    </form>
+    </div>
+</body>
+
+</html>
