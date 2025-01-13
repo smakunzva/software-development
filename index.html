@@ -27,99 +27,119 @@
                 <h1>Welcome to my home page</h1>
             </div>
 
-            <form title="Personal Information" action="#success.html" method="post"></form>
-                <div class="card text-bg-light border-secondary mb-3">
-                    <div class="card-title">
-                        <h3>Personal Information</h3>
+            <form title="Personal Information" action="#success.html">
+            <div class="card text-bg-light border-secondary mb-3">
+                <div class="card-title">
+                    <h3>Personal Information</h3>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="row col-md-6">
+                            <div><label class="error-message" id="lb--name-error" for="name" hidden>Name can only be
+                                    alpha
+                                    characters!</label></div>
+                            <div>
+                                <label id="lb-name" for="name">Name:</label>
+                                <input type="text" id="name" name="name" required placeholder="Please enter your name.."
+                                    onkeypress="validateNames(event)">
+                            </div>
+                        </div>
+
+                        <div class="row col-md-6">
+                            <div><label class="error-message" id="lb-error-matriculation" for="matriculation"
+                                    hidden>Matriculation can only contain numbers!</label></div>
+                            <div>
+                                <label for="matriculation" id="lb-matriculation">Matriculation:</label>
+                                <input type="text" id="matriculation" name="matriculation" required
+                                    placeholder="Please enter matriculation number.."
+                                    onkeypress="validateMatriculation(event)">
+                            </div>
+                        </div>
                     </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="row col-md-6">
-                                <div><label class="error-message" id="lb--name-error" for="name" hidden>Name can only be
-                                        alpha
-                                        characters!</label></div>
-                                <div>
-                                    <label id="lb-name" for="name">Name:</label>
-                                    <input type="text" id="name" name="name" required
-                                        placeholder="Please enter your name.." onkeypress="validateNames(event)">
-                                </div>
-                            </div>
 
-                            <div class="row col-md-6">
-                                <div><label class="error-message" id="lb-error-matriculation" for="matriculation"
-                                        hidden>Matriculation can only contain numbers!</label></div>
-                                <div>
-                                    <label for="matriculation" id="lb-matriculation">Matriculation:</label>
-                                    <input type="text" id="matriculation" name="matriculation" required
-                                        placeholder="Please enter matriculation number.."
-                                        onkeypress="validateMatriculation(event)">
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div><label class="error-message" id="lb-m-initial-error" for="m-initial" hidden>Middle
+                                    Initial
+                                    can only
+                                    be alpha characters!</label></div>
+                            <label for="m-initial" id="lb-m-initial">M. Initial:</label>
+                            <input type="text" id="m-initial-input" name="m-initial" required
+                                placeholder="Please enter your initial.." onkeypress="validateInitials(event)">
+                        </div>
+                        <div class="col-md-6">
+                            <div></div>
+                            <label for="semester">Semester:</label>
+                            <input type="text" id="semester" name="semester" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div><label class="error-message" id="lb-last-name-error" for="lastname" hidden>Last
+                                    name
+                                    can
+                                    only be
+                                    alpha characters!</label></div>
+                            <label id="lb-last-name" for="lastname">Last Name:</label>
+                            <input type="text" id="lastname" name="lastname" required
+                                onkeypress=" validateLastName(event)" placeholder="Please enter your last name..">
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div><label class="error-message" id="lb-m-initial-error" for="m-initial" hidden>Middle
-                                        Initial
-                                        can only
-                                        be alpha characters!</label></div>
-                                <label for="m-initial" id="lb-m-initial">M. Initial:</label>
-                                <input type="text" id="m-initial-input" name="m-initial" required
-                                    placeholder="Please enter your initial.." onkeypress="validateInitials(event)">
-                            </div>
-                            <div class="col-md-6">
-                                <div></div>
-                                <label for="semester">Semester:</label>
-                                <input type="text" id="semester" name="semester" required>
-                            </div>
+                        <div class="col-md-6">
+                            <div></div>
+                            <label for="program">Program:</label>
+                            <select name="programs" id="program" name="program" placeholder="Select program" required
+                                class="top-nav dropdown">
+                                <option selected disabled>Select program..</option>
+                                <optgroup label="SRH Bachelor Programs" id="programs" class="dropdown-toggle">
+                                    <option value="Technology, Architecture & Sustainability">Technology, Architecture &
+                                        Sustainability</option>
+                                    <option value="Communication, Media & Marketing">Communication, Media & Marketing
+                                    </option>
+                                    <option value="Tourism, Hotel & Events">Tourism, Hotel & Events</option>
+                                    <option value="Computer Science & Data Science">Computer Science & Data Science
+                                    </option>
+                                    <option value="Design, Film & Music">Design, Film & Music</option>
+                                    <option value="Logistics">Logistics</option>
+                                    <option value="Psychology">Psychology</option>
+                                    <option value="Business & Law">Business & Law</option>
+                                </optgroup>
+                                <optgroup label="SRH Masters Programs" id="programs" class="dropdown-toggle">
+                                    <option value="Health, Education & Social Affairs">Health, Education & Social
+                                        Affairs</option>
+                                    <option value="Technology, Architecture & Sustainability">Technology, Architecture &
+                                        Sustainability</option>
+                                    <option value="Communication, Media & Marketing">Communication, Media & Marketing
+                                    </option>
+                                    <option value="Tourism, Hotel & Events">Tourism, Hotel & Events</option>
+                                    <option value="Computer Science & Data Science">Computer Science & Data Science
+                                    </option>
+                                    <option value="Design, Film & Music">Design, Film & Music</option>
+                                    <option value="Logistics">Logistics</option>
+                                    <option value="Psychology">Psychology</option>
+                                    <option value="Business & Law">Business & Law</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="country">Country:</label>
+                            <select name="countries" id="country" name="country" required>
+                                <option selected disabled>Select country..</option>
+                                <optgroup label="Countries" id="countries" class="dropdown-toggle">
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="start-date">Started In:</label>
+                            <input type="date" id="start-date" name="start-date" required>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div><label class="error-message" id="lb-last-name-error" for="lastname" hidden>Last
-                                        name
-                                        can
-                                        only be
-                                        alpha characters!</label></div>
-                                <label id="lb-last-name" for="lastname">Last Name:</label>
-                                <input type="text" id="lastname" name="lastname" required
-                                    onkeypress=" validateLastName(event)" placeholder="Please enter your last name..">
-                            </div>
-
-                            <div class="col-md-6">
-                                <div></div>
-                                <label for="program">Program:</label>
-                                <input list="programs" id="program" name="program" placeholder="Select program" required
-                                    class="top-nav dropdown">
-                                <datalist id="programs" class="dropdown-toggle">
-                                    <option value="Health, Education & Social Affairs">
-                                    <option value="Technology, Architecture & Sustainability">
-                                    <option value="Communication, Media & Marketing">
-                                    <option value="Tourism, Hotel & Events">
-                                    <option value="Computer Science & Data Science">
-                                    <option value="Design, Film & Music">
-                                    <option value="Logistics">
-                                    <option value="Psychology">
-                                    <option value="Business & Law"></option>
-                                </datalist>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="country">Country:</label>
-                                <input list="countries" id="country" name="country" placeholder="Select country"
-                                    required>
-                                <datalist id="countries" class="dropdown-toggle">
-                                </datalist>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="start-date">Started In:</label>
-                                <input type="date" id="start-date" name="start-date" required>
-                            </div>
-
-                        </div>
                     </div>
                 </div>
+            </div>
         </section>
     </div>
 
@@ -190,37 +210,58 @@ In conclusion I enjoyed the course and I am looking forward to the next semester
 
                         <button type="button" class="collapsible">Agile</button>
                         <div class="content">
-                            <p>Agile methodology is the leading methodology being used across many industries at the moment. It involes
-                                iterative development and testing. It is a good methodology to use when the requirements are not clear
-                                and the project is complex. It is also good for projects that require frequent changes. Agile methodology
-                                is good for projects that require frequent changes. Agile methodology is good for projects that require frequent changes.
-                                Agile development involves doing things in an iterative manner where you develop a prototype and continously add more fetures.
-                                This helps as clients will start interacting with the prototype and will have clarity of what they are invisioning. There are
-                                various methodologies within AGILE which are Scrum, Kanban, Lean, XP, Adaptive project framework, Extreme project management,
-                                Adaptive software development, Dynamic systems development and Feature driven development.
+                            <p>Agile methodology is the leading methodology being used across many industries at the
+                                moment. It involes
+                                iterative development and testing. It is a good methodology to use when the requirements
+                                are not clear
+                                and the project is complex. It is also good for projects that require frequent changes.
+                                Agile methodology
+                                is good for projects that require frequent changes. Agile methodology is good for
+                                projects that require frequent changes.
+                                Agile development involves doing things in an iterative manner where you develop a
+                                prototype and continously add more fetures.
+                                This helps as clients will start interacting with the prototype and will have clarity of
+                                what they are invisioning. There are
+                                various methodologies within AGILE which are Scrum, Kanban, Lean, XP, Adaptive project
+                                framework, Extreme project management,
+                                Adaptive software development, Dynamic systems development and Feature driven
+                                development.
                             </p>
                         </div>
                         <button type="button" class="collapsible">V Shaped SDLC Model</button>
                         <div class="content">
-                            <p>V Shape SDLC model which is also known as the verification and validation model is an extension of the traditional Waterfall model.
-                                It emphasizes the importance of validation and verification in each phase of the software development lifecycle. The V-shaped model
-                                is characterized by a sequential path of execution of processes, where each phase must be completed before the next phase begins.
-                                The model is called V shaped because the process steps form a V shape when diagrammed. The key phases of V-shaped SDLC model are :
-                                The key phases of V-shaped SDLC model are: Requirements Analysis, System Design, High Level Design, Low Level Design, Implementation, Unit Testing, Integration Testing, System Testing, and Acceptance Testing.
+                            <p>V Shape SDLC model which is also known as the verification and validation model is an
+                                extension of the traditional Waterfall model.
+                                It emphasizes the importance of validation and verification in each phase of the
+                                software development lifecycle. The V-shaped model
+                                is characterized by a sequential path of execution of processes, where each phase must
+                                be completed before the next phase begins.
+                                The model is called V shaped because the process steps form a V shape when diagrammed.
+                                The key phases of V-shaped SDLC model are :
+                                The key phases of V-shaped SDLC model are: Requirements Analysis, System Design, High
+                                Level Design, Low Level Design, Implementation, Unit Testing, Integration Testing,
+                                System Testing, and Acceptance Testing.
                             </p>
                         </div>
                         <button type="button" class="collapsible">Waterfall</button>
                         <div class="content">
-                            <p>This is one of the earliest and most straightforward methodologies used in software developement. It is a linear and sequential approach where
-                                each phase of the developement process must be completed before moving on to the next phase. The model is called waterfall because the process flows downwards through the phases
-                                like a waterfall. The key phases of waterfall model are : requirements analysis, system design, implementation, integration and testing, deployment and maintanance.
+                            <p>This is one of the earliest and most straightforward methodologies used in software
+                                developement. It is a linear and sequential approach where
+                                each phase of the developement process must be completed before moving on to the next
+                                phase. The model is called waterfall because the process flows downwards through the
+                                phases
+                                like a waterfall. The key phases of waterfall model are : requirements analysis, system
+                                design, implementation, integration and testing, deployment and maintanance.
                             </p>
                         </div>
                     </div>
 
-                    <p>Among so many <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">SDLC</a> Methodologies the ones that are in the AGILE classification are better. Among
+                    <p>Among so many <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">SDLC</a>
+                        Methodologies the ones that are in the AGILE classification are better. Among
                         AGILE
-                        <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">SDLC</a> Methods, I have also a few suggestions</p>
+                        <a href="https://en.wikipedia.org/wiki/Systems_development_life_cycle">SDLC</a> Methods, I have
+                        also a few suggestions
+                    </p>
                     <div>
                         <p>A) Scrum</p>
                         <p>B) Kanban</p>
@@ -268,15 +309,11 @@ In conclusion I enjoyed the course and I am looking forward to the next semester
                     <p>B) To make the webpage dynamic</p>
                     <p>C) To make the webpage responsive</p>
                 </div>
-                <div></div>
 
                 <div class="row">
-                    <div class="col-md-2">
-                        <input type="checkbox" id="css" name="css" value="CSS" style="width: 100%;">
-                    </div>
-                    <div class="col-md-9">
-                        <p>I have done this project myself and accept the consequences if found other ways</p>
-                    </div>
+                    <input type="checkbox" id="consent">
+                    <label for="consent">I have done this project myself and accept the consequences if found other
+                        ways</label>
                 </div>
             </div>
     </section>
@@ -299,7 +336,7 @@ In conclusion I enjoyed the course and I am looking forward to the next semester
         </div>
     </section>
     <div>
-        <input type="submit"><a href="#persona-info"></a></input>
+        <input type="submit" value="Submit"></input>
     </div>
     </form>
     </div>
